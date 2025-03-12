@@ -38,7 +38,6 @@ func TestPubSubPerformance(b interface {
 	wg.Add(1)
 	var duration time.Duration
 	go func() {
-		// Đảm bảo subscriber đã sẵn sàng
 		time.Sleep(100 * time.Millisecond)
 		start := time.Now()
 		for i := 0; i < messageCount; i++ {
