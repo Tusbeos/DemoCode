@@ -45,7 +45,7 @@ services:
     container_name: redis
     restart: always
     ports:
-      - "6380:6379"  # Ánh xạ cổng: host 6380 -> container 6379
+      - "6380:6379"
     networks:
       - demo
 
