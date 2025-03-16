@@ -28,7 +28,7 @@ func TestBrokerPerformance(b interface {
 	return nil
 }
 
-// Dành cho Redis Pub/Sub, cần chạy consumption song song với production
+
 func TestPubSubPerformance(b interface {
 	Produce([]byte) error
 	Consume(int) error

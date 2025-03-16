@@ -6,7 +6,7 @@ services:
     environment:
       - ALLOW_ANONYMOUS_LOGIN=yes
     ports:
-      - "32181:2181"  # Thay đổi ánh xạ cổng: host:32181 -> container:2181
+      - "32181:2181"  
     networks:
       - demo
 

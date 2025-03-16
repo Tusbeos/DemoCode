@@ -26,8 +26,8 @@ func NewRabbitMQTester() (*RabbitMQTester, error) {
 
 func (r *RabbitMQTester) Produce(msg []byte) error {
 	return r.ch.Publish(
-		"",           // exchange
-		r.queue.Name, // routing key
+		"",   
+		r.queue.Name,
 		false,
 		false,
 		amqp.Publishing{

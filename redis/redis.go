@@ -20,7 +20,7 @@ type RedisTester struct {
 
 func NewRedisTester() (*RedisTester, error) {
 	client := redis.NewClient(&redis.Options{
-		Addr: "localhost:6380", // sử dụng port 6380 theo ánh xạ từ docker-compose
+		Addr: "localhost:6380", 
 	})
 	_, err := client.Ping(ctx).Result()
 	if err != nil {
@@ -45,7 +45,6 @@ func (r *RedisTester) Consume(messageCount int) error {
 	ch := r.pubsub.Channel()
 	var wg sync.WaitGroup
 	wg.Add(messageCount)
-	// Lắng nghe message trên channel
 	go func() {
 		count := 0
 		for range ch {
