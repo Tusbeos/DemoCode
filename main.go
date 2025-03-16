@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	messageCount := 10000
+	messageCount := 100000
 
 	fmt.Println("=== RabbitMQ ===")
 	rabbit, err := rabbitmq.NewRabbitMQTester()
